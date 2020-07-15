@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'MyFont';
+  src:  url('./PTSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFontBoldItalic';
+  src:  url('./PTSerif-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+.hello {
+  color: red;
+  background: url('./icon.png');
+  font-family: 'MyFont';
+}
