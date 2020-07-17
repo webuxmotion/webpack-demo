@@ -6,6 +6,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    alias: {
+      utils: path.resolve(__dirname, 'src/aliases/utils/'),
+    }
+  },
   module: {
     rules: [
       {
@@ -25,6 +30,18 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           'file-loader',
+        ],
+      },
+      {
+        test: /\.(csv|tsv)$/,
+        use: [
+          'csv-loader',
+        ],
+      },
+      {
+        test: /\.xml$/,
+        use: [
+          'xml-loader',
         ],
       },
     ],

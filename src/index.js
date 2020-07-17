@@ -1,6 +1,8 @@
 //import _ from 'lodash';
 import './style.css';
 import Icon from './icon.png';
+import Data from './data.xml';
+import logger from 'utils/logger';
 
 function component() {
   const element = document.createElement('div');
@@ -13,6 +15,8 @@ function component() {
    const myIcon = new Image();
    myIcon.src = Icon;
    element.appendChild(myIcon);
+
+   logger(Data);
 
   return element;
 }
